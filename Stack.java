@@ -1,53 +1,28 @@
 package datastruct;
 
 public class Stack {
-	public LinkStack top;
-	public static int inf=99999;
-	public Stack() {
-		// TODO Auto-generated constructor stub
-		top=null;
-	}
-	public void push(int data)
-	{	
-		LinkStack node=new LinkStack(data, top);
-		top=node;
-	}
-	public void pop()
-	{
-		if(top!=null)
-			top=top.getPre();
-	}
+	private int a=new int[100];
+	private int size=0;
+	Stack(){}
 	public boolean empty()
 	{
-		return top==null;
+		return size==0;
 	}
-	public int getTop()
+	public boolean push(int e)
 	{
-		if(top!=null)return top.getData();
-		return inf;
+		if(size==100)return false;
+		a[size++]=e;
+		return true;
 	}
-}
-class LinkStack{
-	public int data;
-	public LinkStack pre;
-	public LinkStack(int adata) {
-		pre=null;
-		data=adata;
+	public boolean pop()
+	{
+		if(size==0)return false;
+		size--; 
+		return true;
 	}
-	public LinkStack(int adata,LinkStack apre) {
-		data=adata;
-		pre=apre;
-	}
-	public void setPre(LinkStack pre) {
-		this.pre = pre;
-	}
-	public void setData(int data) {
-		this.data = data;
-	}
-	public int getData() {
-		return data;
-	}
-	public LinkStack getPre() {
-		return pre;
+	public int top()
+	{
+		if(size==0)return -1;
+		return a[size-1];
 	}
 }
