@@ -3,16 +3,9 @@ package datastruct;
 public class Union {
 	// find the parent of node i
 	public static int find(int[] a, int i) {
-		int j = i;
-		while (a[j] >= 0) {
-			j = a[j];
-		}
-		while (i != j) {
-			int t = a[i];
-			a[i] = j;
-			i = t;
-		}
-		return j;
+		if(a[i]<0)return i;
+		a[i]=find(a,a[i]);
+		return a[i];
 	}
 
 	public static void union(int[] a, int i, int j) {
