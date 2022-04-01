@@ -1,31 +1,25 @@
-# 基础数据结构预算法
+# Basic datastruct and algorithm
 
 ## LineTree
 
-用树形表示的线段树
+LineTree use LinkList to store and use Array to store
 
 ## Sort
 
-各种基础的排序算法
+sort algorithms
 
 ## Union
 
-并查集
+set of find and union
 
 ## Heap
 
-数组表示的最大堆
+heap which root has the greatest value 
 
 ## Stack
 
-栈的链式存储
+use LinkList to store stack (now is Array)
 
 ## Graph
 
-图的邻接矩阵
 
-
-
-
-
-错误之处欢迎指正
